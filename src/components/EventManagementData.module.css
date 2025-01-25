@@ -1,0 +1,52 @@
+.title {
+  background-color: #1d82f5;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  height: 40px;
+  width: 115px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.title:hover {
+  background-color: orange;
+}
+.dialogPaper {
+  position: absolute;
+  background: #141b2d;
+  top: 0;
+  background-color: white;
+  max-height: 95%;
+  margin: auto;
+  overflow-x: hidden;
+  z-index: 1200;
+}
+.appBar {
+  position: relative;
+  background-color: #1d82f5;
+}
+.typography {
+  margin-left: 8px;
+  flex: 1;
+  font-size: 18px;
+}
+.box {
+  background: white;
+  margin: 0;
+}
+.container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .container {
+    overflow-x: scroll;
+  }
+}
