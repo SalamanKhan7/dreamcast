@@ -610,7 +610,7 @@ function EventManagementData() {
                     color: "#333",
                   }}
                 >
-                  Event Lists
+                  Member Lists
                 </span>
               }
               data={users}

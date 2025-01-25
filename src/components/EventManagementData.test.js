@@ -1,11 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
-
 import { Provider } from "react-redux";
-
-import EventManagementData from "./EventManagementData"; // Update with the correct path
-
+import EventManagementData from "./EventManagementData";
 import store from "../redux/store";
-
 describe("EventManagementData", () => {
   test("delete button removes an event", async () => {
     render(
