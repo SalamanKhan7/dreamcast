@@ -462,8 +462,14 @@ function EventManagementData() {
       },
     });
 
-  // Table Ends Here
-
+  const handleValidation = () => {
+    const { name, email, phone, address } = allInput;
+    if (!name || !email || !phone || !address?.city || !address?.zipcode) {
+      showAlert("Please fill out all required fields.", "error");
+      return false;
+    }
+    return true;
+  };
   return (
     <Box>
       <StatusAlert
@@ -480,7 +486,7 @@ function EventManagementData() {
       >
         <Box onClick={handleClickOpen} className={styles.title}>
           <Add />
-          Add Event
+          Add Member
         </Box>
       </Stack>
       <Dialog
@@ -590,7 +596,11 @@ function EventManagementData() {
               type="submit"
               variant="contained"
               color="primary"
-              onClick={handleSubmit}
+              onClick={(e) => {
+                if (handleValidation()) {
+                  handleSubmit(e);
+                }
+              }}
             >
               Save
             </Button>
